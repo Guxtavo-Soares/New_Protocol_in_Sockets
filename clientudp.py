@@ -28,7 +28,7 @@ try:
             client.sendto(nome + ": " + sua_msg + "\n" + "Voce: ", (conectando_ip, conectando_porta))
             msg2, friend = client.recvfrom(1024)
             if msg2 == "sair\n":
-                client.sendto("Voce saiu do chat com gus.\nPrecione enter", (conectando_ip, conectando_porta))
+                client.sendto("Voce saiu do chat com " + nome + ".\nPrecione enter", (conectando_ip, conectando_porta))
                 client.shutdown(socket.SHUT_RDWR)
                 client.close()
                 print friend + " saiu do chat\nPrecione enter."
